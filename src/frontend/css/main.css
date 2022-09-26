@@ -74,7 +74,7 @@ body{
 }
 
 .projects-section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--color-theme);
     border-top:1px solid rgba(255, 255, 255, 0.274);
@@ -121,4 +121,30 @@ body{
     font-weight: 900;
     font-size: 2em;
     margin: auto;
+}
+
+.content-selector-wrapper{
+    border: 1px solid white;
+    margin: auto;
+    width: fit-content;
+    margin-top: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 30px;
+    /* background-color: aliceblue; */
+}
+
+.content-selector-btn{
+    /* border: 1px solid white; */
+    text-decoration: none;
+    padding: 20px;
+    color:var(--color-main-text)
+    /* border-radius: 30px; */
+    /* width: 100px; */
+}
+
+.content-selector-btn-selected{
+    background-color: white;
+    color:var(--color-theme);
+    border-radius: 30px;
 }
