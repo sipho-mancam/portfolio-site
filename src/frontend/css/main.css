@@ -1,0 +1,124 @@
+
+:root{
+    --color-theme:#0c1e31;
+    --color-main-text:white;
+}
+
+body{
+    background-color: var(--color-theme);
+    color:var(--color-main-text);
+
+}
+
+.intro{
+    height: 70vh;
+    width: 100%;
+    background-color: var(--color-theme);
+}
+
+
+/* .section{
+    /* border: 1px solid red; */
+/*} */
+.text-section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.text{
+    color:var(--color-main-text);
+    font-family:'Segoe UI',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;;
+}
+
+.name{
+    font-size:3.5em;
+    font-weight: 900;
+    margin-left: 20px;
+}
+
+.ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.description{
+    /* border: 1px solid white; */
+    width: fit-content;
+    margin-left:20px;
+}
+
+.hire-me-btn{
+    border: 1px solid white;
+    width: fit-content;
+    padding: 10px;
+    margin-left:20px;
+    color:white;
+    text-decoration: none;
+}
+
+.hire-me-btn:hover{
+    text-decoration: none;
+    color: var(--theme-color);
+    background-color: white;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.image-section{
+    /* border: 1px solid black; */
+    background-image: url('../resources/code-bg-2.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-blend-mode: color-burn;
+}
+
+.projects-section{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-theme);
+    border-top:1px solid rgba(255, 255, 255, 0.274);
+}
+
+.content-container{
+    border: 1px solid solid white;
+    display: flex;
+    flex-flow:column;
+    padding: 50px;
+}
+
+.heading{
+    margin: auto;
+}
+
+.grid{
+    /* border:1px solid red; */
+    width: 900px;
+    margin: auto;
+}
+
+.item-container{
+    width: 230px;
+    height: 230px;
+    border:1px solid rgba(255, 255, 255, 0.397);
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.item-container:hover{
+    background-color: #294461a8;
+}
+
+.item-icon{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    /* height: 0px; */
+}
+
+.p-group-name{
+    font-weight: 900;
+    font-size: 2em;
+    margin: auto;
+}
