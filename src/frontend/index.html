@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/button-anim.css" />
     <link rel="stylesheet" type="text/css" href="css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="css/overlay.css" />
+    <link rel="stylesheet" type="text/css" href="css/Projects/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/Projects/tab.css" />
+    <link rel="stylesheet" type="text/css" href="css/Projects/listView.css" />
+    <link rel="stylesheet" type="text/css" href="css/Projects/controls.css" />
     <link rel="stylesheet" href="./css/main.css" type="text/css" media="all" />
     <!-- CSS only -->
 
@@ -70,7 +75,7 @@
                         <img class="img-responsive item-icon" src="./resources/python-img-2.png" />
                         <span class="text  p-group-name">Python</span>
                     </div>
-                    <div class="col project-item item-container" name="js">
+                    <div class="col project-item item-container" name="JS">
                         <img class="img-responsive item-icon" src="./resources/js-icon.png" />
                         <span class="text  p-group-name">JavaScript</span>
                     </div>
@@ -84,7 +89,7 @@
                         <img class="img-responsive item-icon" src="./resources/c-icon.png" />
                         <span class="text  p-group-name">C</span>
                     </div>
-                    <div class="col project-item item-container" name="cpp">
+                    <div class="col project-item item-container" name="c++">
                         <img class="img-responsive item-icon" src="./resources/cpp-icon.png" />
                         <span class="text  p-group-name">C++</span>
                     </div>
@@ -94,7 +99,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col project-item item-container" name="html-css">
+                    <div class="col project-item item-container" name="html">
                         <img class="img-responsive item-icon" src="./resources/html-icon.png" />
                         <span class="text  p-group-name">HTML & CSS</span>
                     </div>
@@ -156,6 +161,11 @@
         </div>
     </div>
 
+    <div class="overlay-container" id="overlay-container">
+        
+
+    </div>
+
 
     <div class="row footer-copyright">
         <div class="container">
@@ -175,4 +185,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="./javascript/textAnim.js"> </script>
+<script src="./javascript/UI/utility.js"></script>
+<script src="./javascript/UI/repository.js"></script>
+<script src="./javascript/UI/viewModel.js"></script>
+<script src="./javascript/UI/viewBase.js"></script>
+<script src="./javascript/UI/overlayContainerView.js"></script>
+<script src="./javascript/UI/projectViewGroup.js"></script>
+
+<script src="./javascript/UI/projectCardsView.js"></script>
+<script src="./javascript/UI/UIController.js"></script>
 </html>

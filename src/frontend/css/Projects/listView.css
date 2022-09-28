@@ -1,0 +1,18 @@
+
+.list-container{
+    display: flex;
+    flex-flow:column;
+    justify-content: flex-start;
+}
+
+.list-item{
+    /* border: 1px solid black; */
+    padding: 10px;
+    color:rgb(2, 161, 253);
+    border-bottom:1px solid var(--color-line);
+}
+
+.list-item:hover{
+    background-color: var(--color-hovered-white);
+    cursor: pointer;
+}

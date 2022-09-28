@@ -1,0 +1,26 @@
+
+
+.f-nav-controls-container{
+    /* border: 1px solid black; */
+    margin-left: auto;
+    padding: 0;
+    margin-right: 0;
+}
+
+.f-nav-controls-container .col-3{
+    width: 30%;
+}
+
+.f-nav-control{
+    /* border: 1px solid black; */
+    width: 30%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+
+
+.f-nav-control:hover{
+    background-color: var(--color-hovered-white);
+}   
