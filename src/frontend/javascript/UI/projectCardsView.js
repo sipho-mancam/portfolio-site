@@ -17,7 +17,7 @@ class ProjectCardsView extends View{
             c.addEventListener('click', (e)=>{
                 console.log(e.currentTarget.children)
                 let img_url = e.currentTarget.children[0].getAttribute('src');
-                let name = e.currentTarget.getAttribute('name')
+                let name = e.currentTarget.getAttribute('name');
                 this.projectViewGroup.open(name.toUpperCase(), img_url);
             });
         }

@@ -1,0 +1,41 @@
+/**
+ * NEW  GOLDEN RULE:
+ *      ***ALL VIEWS SHOULD ONLY EVER KNOW DATA RELEVANT TO THEM AND NOTHING ELSE ***
+ * 
+*/
+
+
+Repository Data Structure
+/**
+ * data = {
+ *      
+ *      groups = [
+ *          {
+ *              name: Python,
+ *              id:1dasd112sak123kas13(some hash),
+ *              project-list:[
+ *                  {
+ *                      name:Soduku Solver,
+ *                      id:123asdad123asda(some hash),
+ *                      title: Soduku Solver,
+ *                      path:projects>name>$selected-tab   
+ *                  },
+ *              ]
+ * 
+ *          },
+ * 
+ *      ]
+ * 
+ *      projects:
+ *      {
+ *          name:
+ *          {
+ *              preview: string(LINK),
+ *              description:string "",
+ *              code:string(LINK),
+ *              group:string(name)Python,
+                id:efdadca2312312d (some hash)
+ *          }
+ *      }
+ * }
+ */

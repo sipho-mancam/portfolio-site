@@ -7,7 +7,7 @@
  class ViewModel{
     constructor(){
         this.livedata = {}
-        // this.repository = new Repository()
+        this.repository = new Repository()
         this.views_list = {}
         // this.uiController = uiController;
         // this.update()
@@ -36,5 +36,6 @@
         this.uiController.update()
     }
 }
+
 
 const global_viewModel = new ViewModel()

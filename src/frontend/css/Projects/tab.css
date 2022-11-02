@@ -48,3 +48,7 @@
 .active-tab:hover{
     background-color: var(--color-main-bg);
 }
+
+#tab-content{
+    padding: 20px;
+}
