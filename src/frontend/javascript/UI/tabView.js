@@ -17,7 +17,8 @@ class TabView extends View{
                 this.currently_selected_tab.className = this.currently_selected_tab.className.replace(' active-tab', ' ');
                 t.className += ' active-tab';
                 this.currently_selected_tab = t;
-                this.domElement.innerHTML = this.data[this.currently_selected_tab.getAttribute('name')];
+
+                if(!this.data.length || this.data.length>0)this.domElement.innerHTML = this.data[this.currently_selected_tab.getAttribute('name')];
             });
         }
     }
@@ -29,10 +30,18 @@ class TabView extends View{
     }
 
     showView(current_sel){
+
         this.update(current_sel)
         .then(res=>{
-            this.data = res; // udate the data and show now.
-            this.domElement.innerHTML = this.data[this.currently_selected_tab.getAttribute('name')];
+
+            console.log(res.length)
+            if(!res.length){
+                this.data = res; // udate the data and show now.
+                this.domElement.innerHTML = this.data[this.currently_selected_tab.getAttribute('name')];
+            }
+            if(res.length == 0)
+                this.domElement.innerHTML = " "
+            
             
         })
     }

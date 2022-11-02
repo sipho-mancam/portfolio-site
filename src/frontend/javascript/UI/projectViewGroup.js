@@ -21,10 +21,11 @@ class ProjectUIView extends View {
         this.index = 0;
     }
 
-    open(name, img_url, path=""){
+    open(name, img_url, index=0, path=""){
         this.group_name = name;
         this.group_img_url = img_url;
         this.group_data_path = path;
+        this.index = index;
         return `
         <br /><br />
         <div class="projects-ui row">
@@ -84,7 +85,7 @@ class ProjectUIView extends View {
     init(){
         if(this.group_name != null){
             // this.tabView = new TabView(this.group_name,this.group_data_path)
-            this.listView = new ListView(this.group_name, document.getElementById("list-cont"),{index:0});
+            this.listView = new ListView(this.group_name, document.getElementById("list-cont"),{index:this.index});
             // this.listView.updateList(1);
             console.log("I initialize the view");
             const next = document.getElementById("next-group");
@@ -129,9 +130,9 @@ class ProjectViewGroup extends ViewGroup{
         super.init();
     }
 
-    open(name, img_url){
+    open(name, img_url, index=0){
         this.projectOverlay.draw(()=>{
-            return this.projectUIView.open(name, img_url);
+            return this.projectUIView.open(name, img_url, index);
         }, null);
         this.projectUIView.init();
     }

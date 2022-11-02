@@ -15,14 +15,14 @@ class ProjectCardsView extends View{
     init(){
         for(let c of this.domElement){
             c.addEventListener('click', (e)=>{
-                console.log(e.currentTarget.children)
+                // console.log(e.currentTarget.children)
                 let img_url = e.currentTarget.children[0].getAttribute('src');
                 let name = e.currentTarget.getAttribute('name');
-                this.projectViewGroup.open(name.toUpperCase(), img_url);
+                let ind  = parseInt(c.getAttribute('index'));
+                this.projectViewGroup.open(name.toUpperCase(), img_url, ind);
             });
         }
     }
 }
 
 const projectCardsView = new ProjectCardsView('project-cards-view', null, null);
-

@@ -22,30 +22,39 @@ class ListView extends View{
         this.load_data()
         .then(res=>{
 
-            this.current_selected = this.data[0];
-            this.domElement.innerHTML = this.showView();
-            const list_items = document.getElementsByClassName('list-item');
+            if(this.data){
+                this.current_selected = this.data[0];
+                this.domElement.innerHTML = this.showView();
+                const list_items = document.getElementsByClassName('list-item');
 
-            
-            this.group_name.innerText = card_images[this.current_list]['name'].toUpperCase();
-            this.group_img.setAttribute('src', card_images[this.current_list]['img_url']);
+                
+                this.group_name.innerText = card_images[this.current_list]['name'].toUpperCase();
+                this.group_img.setAttribute('src', card_images[this.current_list]['img_url']);
 
-            this.projectViewName.innerText = this.current_selected['title'];
-            this.TabSystem.showView(this.current_selected);
-
-            for(let item of list_items){
-                item.addEventListener('click', e=>{
-                    console.log(this.current_selected)
-                    // send signal to the tab view and show data
-                    this.projectViewName.innerText = item.getAttribute('name');
-                    let index = parseInt(item.getAttribute('index'))
-                    
-                    this.current_selected  = this.data[index];
-                    console.log(this.current_selected)
+                try{
+                    this.projectViewName.innerText = this.current_selected['title'];
                     this.TabSystem.showView(this.current_selected);
-                })
+                }catch(err){
+                    this.projectViewName.innerText = " "
+                }
+                
 
+                // initialise the list items to be clickable.
+                for(let item of list_items){
+                    item.addEventListener('click', e=>{
+                        // console.log(this.current_selected)
+                        // send signal to the tab view and show data
+                        this.projectViewName.innerText = item.getAttribute('name');
+                        let index = parseInt(item.getAttribute('index'))
+                        
+                        this.current_selected  = this.data[index];
+                        // console.log(this.current_selected)
+                        this.TabSystem.showView(this.current_selected);
+                    })
+
+                }
             }
+            
         });
     }
     
@@ -64,7 +73,7 @@ class ListView extends View{
         await this.viewModel.get(`groups>index=${this.current_list}>project-list`)
         .then(res=>{
             // console.log(res)
-            this.data = res;
+            if(res)this.data = res;
         });
 
         // return super.load_data();

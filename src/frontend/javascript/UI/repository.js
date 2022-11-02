@@ -113,22 +113,25 @@ class Repository{
     }
 
     traverseDataStructure(path){
-        let cur = this.data_structure
-        let paths = path.split('>')
-        console.log(paths)
-        if(paths.length == 0) return cur[path]
-
+        let cur = this.data_structure;
+        let paths = path.split('>');
+   
+        if(paths.length == 0) return cur[path];
+        
+        // Traverse the data structure to search for the "requested" data
         for(let p of paths){
             if(p.match("index")){ // it's an array
                 let index = parseInt(p.split('=')[1]);
                 p = index;
-
-                console.log(index)
-               
+                // console.log(index)
             }
             cur = cur[p]
+            if(!cur){
+                // this.state = 0x00;
+                return [];
+            }
         }
-        return cur
+        return cur;
     }
 
     updateContent(method, url, data={}){
@@ -136,15 +139,17 @@ class Repository{
        this.update(method, url, data)
        .then(res=>{
 
-       })
+       });
     }
 
-    isReady(){return this.state==0x11}
+    isReady(){
+        return this.state==0x11;
+    }
 
     get(key){
 
         if(this.isReady()){
-            return this.traverseDataStructure(key)
+            return this.traverseDataStructure(key);
         }else{
             return {'error':'Still loading...'}
         }
